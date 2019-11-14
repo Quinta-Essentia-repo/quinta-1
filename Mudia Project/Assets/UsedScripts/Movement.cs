@@ -27,7 +27,10 @@ using UnityEngine.UI;
         noise = 6f;
         maxNoise = 24f;
     }
+    public void Echo()
+    {
 
+    }
         private void Update()
         {
             Move();
