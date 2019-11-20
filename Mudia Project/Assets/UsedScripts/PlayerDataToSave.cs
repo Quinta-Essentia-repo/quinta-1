@@ -20,7 +20,7 @@ public class PlayerDataToSave
     public int skinIndex, eyesIndex, mouthIndex, hairIndex, clothesIndex, armourIndex;
     public PlayerDataToSave(PlayerHandler player)
     {
-        playerName = player.characterName;
+        
         level = 0;
         if (player.curCheckPoint != null)
         {
@@ -36,32 +36,18 @@ public class PlayerDataToSave
         }
         else
         {
-            checkPoint = player.firstCheckPointName;
+            
             posx = 0;
             posy = 0;
             posz = 0;
         }
         maxHealth = player.maxHealth;
-        maxMana = player.maxMana;
-        maxStamina = player.maxStamina;
+       
 
         curHealth = player.curHealth;
-        curMana = player.curMana;
-        curStamina = PlayerHandler.curStamina;
+        
 
-        for (int i = 0; i < 6; i++)
-        {
-            stats[i] = player.stats[i].value;
-        }
-
-        skinIndex = player.skinIndex;
-        hairIndex = player.hairIndex;
-        mouthIndex = player.mouthIndex;
-        eyesIndex = player.eyesIndex;
-        clothesIndex = player.clothesIndex;
-        armourIndex = player.armourIndex;
-        raceIndex = (int)player.characterRace;
-        classIndex = (int)player.characterClass;
+        
     }
 
 }

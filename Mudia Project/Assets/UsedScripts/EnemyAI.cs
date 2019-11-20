@@ -48,7 +48,7 @@ public class EnemyAI : MonoBehaviour
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, sightDist, targetMask);
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            Transform target
+            //Transform target;
         }
         noiseRange = movement.noise * sense;
         //kills the enemy when they lose all their health
