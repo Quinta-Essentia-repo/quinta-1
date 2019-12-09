@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
    
     //gives distances for how far away the player will be when they switch behaviour
     public float dist, sightDist;
-    
+    public bool Detected;
     public GameObject self;
     //public GameObject playerShadow;
     public float turnSpeed;
@@ -75,12 +75,13 @@ public class EnemyAI : MonoBehaviour
             else if (dist <= noiseRange)
             {
                 agent.destination = target.position;
-               
+                Detected = true;
             }
 
 
             else
             {
+                Detected = false;
                 if (points.Length == 0)
                     return;
 
