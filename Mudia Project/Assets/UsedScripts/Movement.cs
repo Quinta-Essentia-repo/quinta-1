@@ -8,7 +8,7 @@ using UnityEngine.UI;
     {
         [Header("Speed Vars")]
         //value Variables
-        public float moveSpeed, noise, maxNoise;
+        public float moveSpeed, noise, maxNoise, echoNoise;
         public float walkSpeed, runSpeed, crouchSpeed, jumpSpeed;
         public static float _gravity = 20;
         //Struct - Contains Multiple Variables (eg...3 floats)
@@ -29,7 +29,10 @@ using UnityEngine.UI;
     }
     public void Echo()
     {
-
+if (noise <= echoNoise)
+        {
+            //noise = Vector3.LerpUnclamped(echoNoise, noise, 1f);
+        }
     }
         private void Update()
         {
