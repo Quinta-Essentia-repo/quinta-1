@@ -113,9 +113,10 @@ GameObject:
   - component: {fileID: 536976042912632607}
   - component: {fileID: 7643871764336857315}
   - component: {fileID: 4757821436864784803}
+  - component: {fileID: 5066258423428928638}
   m_Layer: 0
   m_Name: regina
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +155,7 @@ Animator:
   m_GameObject: {fileID: 1042454542454648009}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8463a3c97f087e140b24e3c77e6d1e32, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e73ebfdbfb50564298835cab8019184, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -195,15 +196,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   noise: 0
-  maxNoise: 0
-  walkSpeed: 0
-  runSpeed: 0
-  crouchSpeed: 0
-  jumpSpeed: 0
-  player: {fileID: 0}
+  maxNoise: 100
+  echoNoise: 0
+  walkSpeed: 10
+  runSpeed: 20
+  crouchSpeed: 5
+  jumpSpeed: 10
+  player: {fileID: 7643871764336857315}
   capsule: {fileID: 0}
   sphere: {fileID: 0}
   noiseBar: {fileID: 0}
+  animator: {fileID: 1042454542447353499}
 --- !u!114 &7643871764336857315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,12 +219,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9da914557decb40b357dd682e6d4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  curHealth: 0
-  healRate: 0
+  maxHealth: 100
+  curHealth: 100
+  healRate: 1
   m_FrontCheck: {fileID: 0}
   healthBar: {fileID: 0}
   deathImage: {fileID: 0}
+  animator: {fileID: 1042454542447353499}
   character: 
   text: {fileID: 0}
   curCheckPoint: {fileID: 0}
@@ -321,6 +325,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5066258423428928638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042454542454648009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd3b1b6d9f8b3d4c99ed91141962d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 0
+  sensitivity: 15
+  minY: -60
+  maxY: 60
 --- !u!1 &1042454542454648011
 GameObject:
   m_ObjectHideFlags: 0
