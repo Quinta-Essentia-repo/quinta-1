@@ -27,8 +27,8 @@ public class PlayerHandler : MonoBehaviour
   
     bool canHeal;
     float healTimer;
-   
-   
+
+    public Animator animator;
    
     public string character;
     public Text text;

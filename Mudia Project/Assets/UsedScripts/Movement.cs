@@ -18,6 +18,7 @@ using UnityEngine.UI;
         private CharacterController _charC;
     public Collider capsule, sphere;
     public Slider noiseBar;
+    public Animator animator;
     private void Start()
         {
             _charC = GetComponent<CharacterController>();
@@ -55,18 +56,27 @@ if (noise <= echoNoise)
             //set speed
             if (Input.GetButton("Crouch"))
             {
+                animator.SetBool("Moving", true);
+                animator.SetBool("Crouching", true);
+                animator.SetBool("Running", false);
                 noise = 0f;
                 moveSpeed = crouchSpeed;
             }
 
             else if (Input.GetButton("Sprint"))
             {
+                animator.SetBool("Moving", true);
+                animator.SetBool("Running", true);
+                animator.SetBool("Crouching", false);
                 moveSpeed = runSpeed;
                 noise = 12f;
             }
 
             else
             {
+                animator.SetBool("Crouching", false);
+                animator.SetBool("Running", false);
+                animator.SetBool("Moving", true);
                 moveSpeed = walkSpeed;
                 noise = 6f;
             }
@@ -74,7 +84,8 @@ if (noise <= echoNoise)
                 _moveDir = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * moveSpeed);
                 if (Input.GetButton("Jump"))
                 {
-                    _moveDir.y = jumpSpeed;
+                animator.SetTrigger("Jumping");
+                _moveDir.y = jumpSpeed;
                 noise = 18f;
             }
             }
