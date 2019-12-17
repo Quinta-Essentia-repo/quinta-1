@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 555992215}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,12 +137,23 @@ MonoBehaviour:
   noiseRange: 10
   sense: 1
   agent: {fileID: 5334966970712688455}
+  danger: {fileID: 0}
   dist: 10
   sightDist: 10
+  Detected: 0
+  Combat: 0
   self: {fileID: 5334966970712688452}
   turnSpeed: 10
-  angle: 10
+  sightAngle: 0
   movement: {fileID: 0}
   waypointParent: {fileID: 0}
   waypointDistance: 0
   currentWayPoint: 1
+  rigid: {fileID: 0}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  AttackTimer: 0

@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public Transform target;
     public float curHealth, maxHealth, moveSpeed, attackRange, attackSpeed, noiseRange, sense;
     public NavMeshAgent agent;
-   
+    public DangerZone danger;
     //gives distances for how far away the player will be when they switch behaviour
     public float dist, sightDist;
     public bool Detected;
@@ -26,6 +26,8 @@ public class EnemyAI : MonoBehaviour
     public Rigidbody rigid;
     public LayerMask targetMask;
     public LayerMask obstacleMask;
+    public float AttackTimer;
+
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if(!angleIsGlobal)
@@ -42,9 +44,13 @@ public class EnemyAI : MonoBehaviour
         points = waypointParent.GetComponentsInChildren<Transform>();
         sightDist = 100f;
         sightAngle = 90f;
+        
+        AttackTimer = attackSpeed;
     }
+    
     void Update()
     {
+        attackSpeed = 2f + 0.2f * danger.EnemyNumber;
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, sightDist, targetMask);
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
@@ -66,11 +72,20 @@ public class EnemyAI : MonoBehaviour
                 return;
             }
             //attacks the player if they get too close
-            else if (dist <= attackRange)
+            else if (danger.Combat == true && AttackTimer != 0)
+            {
+                AttackTimer -= Time.deltaTime;
+                Debug.Log("Attack");
+                dist = 0;
+
+            }
+            else if (danger.Combat == true && AttackTimer == 0)
             {
                 Debug.Log("Attack");
-               
+                AttackTimer = attackSpeed;
+                dist = 0;
             }
+
             //follows the player when they see him
             else if (dist <= noiseRange)
             {
