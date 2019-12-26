@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
     public float AttackTimer;
-
+    RaycastHit hit;
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if(!angleIsGlobal)
@@ -51,11 +51,12 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         attackSpeed = 2f + 0.2f * danger.EnemyNumber;
-        Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, sightDist, targetMask);
-        for (int i = 0; i < targetsInViewRadius.Length; i++)
+        
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, targetMask))
         {
-            //Transform target;
+            agent.destination = target.position;
         }
+       
         noiseRange = movement.noise * sense;
         //kills the enemy when they lose all their health
         if (curHealth <= 0)

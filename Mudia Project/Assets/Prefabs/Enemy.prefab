@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2086104952540589678}
   - component: {fileID: 3952524466415898874}
   - component: {fileID: 6380951885212488368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -156,10 +156,10 @@ MonoBehaviour:
   rigid: {fileID: 0}
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   AttackTimer: 0
 --- !u!54 &3837745443708581627
 Rigidbody:
