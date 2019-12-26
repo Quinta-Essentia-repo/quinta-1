@@ -11,13 +11,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : CharacterStats
 {
-
+    public PlayerHandler handler;
     // Use this for initialization
     public override void Start()
     {
 
         base.Start();
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        maxHealth = handler.maxHealth;
     }
 
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)

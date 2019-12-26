@@ -115,7 +115,8 @@ GameObject:
   - component: {fileID: 7781342307318327892}
   - component: {fileID: 4757821436864784803}
   - component: {fileID: 5066258423428928638}
-  - component: {fileID: 3511893636285229407}
+  - component: {fileID: 2169647363276387144}
+  - component: {fileID: 1532599157167392446}
   m_Layer: 0
   m_Name: regina
   m_TagString: Player
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 1
+  handler: {fileID: 7643871764336857315}
   healthBarPos: {fileID: 0}
 --- !u!82 &4757821436864784803
 AudioSource:
@@ -346,7 +348,7 @@ MonoBehaviour:
   sensitivity: 15
   minY: -60
   maxY: 60
---- !u!114 &3511893636285229407
+--- !u!114 &2169647363276387144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,9 +357,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042454542454648009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7431fbcef230956439052604eca169e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f07742a8abc4949a51cf58f580263e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
   damage: 0
   armor: 0
+  handler: {fileID: 7643871764336857315}
+--- !u!114 &1532599157167392446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042454542454648009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b3e1fdb75f3804ea624dde71955d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCombatManager: {fileID: 7781342307318327892}
+  playerStats: {fileID: 2169647363276387144}

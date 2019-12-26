@@ -11,7 +11,7 @@ public class CharacterCombat : MonoBehaviour
 
     public float attackRate = 1f;
     private float attackCountdown = 0f;
-
+    public PlayerHandler handler;
     public event System.Action OnAttack;
 
     public Slider healthBarPos;
@@ -23,7 +23,7 @@ public class CharacterCombat : MonoBehaviour
     void Start()
     {
         myStats = GetComponent<CharacterStats>();
-        //healthBarPos.value;
+        healthBarPos = handler.healthBar;
     }
 
     void Update()

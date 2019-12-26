@@ -1117,6 +1117,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 30952536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &35945701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7820317227162989267, guid: f71a0d0e888d64f449fb1361dc973dbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7820317227680872006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &35945703
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35945701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2.01
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &41547937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40829,26 +40849,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2936603384876755904, guid: 683ee94713e4f964980034d9f70cb588,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.11111112
-      objectReference: {fileID: 0}
-    - target: {fileID: 2936603384876755904, guid: 683ee94713e4f964980034d9f70cb588,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2936603384878871246, guid: 683ee94713e4f964980034d9f70cb588,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2936603384878871246, guid: 683ee94713e4f964980034d9f70cb588,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.11111112
-      objectReference: {fileID: 0}
     - target: {fileID: 4494847105659321113, guid: 683ee94713e4f964980034d9f70cb588,
         type: 3}
       propertyPath: door2
@@ -40859,6 +40859,26 @@ PrefabInstance:
       propertyPath: door1
       value: 
       objectReference: {fileID: 714790871}
+    - target: {fileID: 2936603384876755904, guid: 683ee94713e4f964980034d9f70cb588,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11111112
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936603384876755904, guid: 683ee94713e4f964980034d9f70cb588,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936603384878871246, guid: 683ee94713e4f964980034d9f70cb588,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936603384878871246, guid: 683ee94713e4f964980034d9f70cb588,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11111112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683ee94713e4f964980034d9f70cb588, type: 3}
 --- !u!4 &5066258423428434013 stripped
@@ -41234,22 +41254,42 @@ PrefabInstance:
     - target: {fileID: 7820317227162989268, guid: f71a0d0e888d64f449fb1361dc973dbc,
         type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7820317227162989268, guid: f71a0d0e888d64f449fb1361dc973dbc,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7820317227162989268, guid: f71a0d0e888d64f449fb1361dc973dbc,
         type: 3}
       propertyPath: m_Drag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7820317227162989268, guid: f71a0d0e888d64f449fb1361dc973dbc,
         type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820317227162989268, guid: f71a0d0e888d64f449fb1361dc973dbc,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820317227162989264, guid: f71a0d0e888d64f449fb1361dc973dbc,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820317227162989264, guid: f71a0d0e888d64f449fb1361dc973dbc,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820317227162989264, guid: f71a0d0e888d64f449fb1361dc973dbc,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f71a0d0e888d64f449fb1361dc973dbc, type: 3}
