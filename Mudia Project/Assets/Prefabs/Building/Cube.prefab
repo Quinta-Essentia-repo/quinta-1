@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door1: {fileID: 2153763638760778837}
   door2: {fileID: 2153763638758798683}
+  vertical: 0
 --- !u!1001 &4494847105153163667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,6 +174,11 @@ PrefabInstance:
     - target: {fileID: 1630319114858976093, guid: 0ea070a686bdb274687ec92ab5f29111,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831309865613403611, guid: 0ea070a686bdb274687ec92ab5f29111,
+        type: 3}
+      propertyPath: m_Carve
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -270,6 +276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 831309865613403611, guid: 0ea070a686bdb274687ec92ab5f29111,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea070a686bdb274687ec92ab5f29111, type: 3}
