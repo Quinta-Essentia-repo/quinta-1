@@ -454,11 +454,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8463a3c97f087e140b24e3c77e6d1e32,
-    type: 3}
-  animationType: 2
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
